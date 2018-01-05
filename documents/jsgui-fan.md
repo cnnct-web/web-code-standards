@@ -212,5 +212,210 @@ milo.addEvent(g('domId'), 'click', function(){
 })();  // 正确的结束分号
 ```
 
+## 4、注释
 
+对代码中的类、方法、属性、复杂的实现逻辑等，应该加上必要的注释。注释的格式参照JSDoc语法。常见的注释范例：
+
+```js
+/**
+ * 这是一段常规注释，不包含调用参数和返回值
+ */
+ function doSomething() {
+     alert('hello');
+ }
+
+/**
+ * 这是一个有调用参数和返回值的函数
+ * 注释里要用@param和@return分别标注参数和返回值
+ *
+ * @param {number} idx 每次执行时当前元素在数组中的索引
+ * @param {object} dom 当前循环到的元素
+ * @return {string} 每次循环时返回当前元素的id
+ */
+ $.each = function(idx, dom) {
+     if(dom = this[idx]) {
+         return dom.id;
+     } else {
+         return '';
+     }
+ };
+```
+
+## 5、技巧和实践
+
+### eval 函数（魔鬼）
+
+`eval()`不但混淆语境还很危险，总会有比这更好、更清晰、更安全的另一种方案来写你的代码，因此尽量不要使用 evil 函数。
+
+### this 关键字
+
+只在对象构造器、方法和在设定的闭包中使用`this`关键字。`this`的语义在此有些误导。它时而指向全局对象（大多数时），时而指向调用者的定义域（在 eval 中），时而指向 DOM 树中的某一节点（当用事件处理绑定到 HTML 属性上时），时而指向一个新创建的对象（在构造器中），还时而指向其它的一些对象（如果函数被`call()`和`apply()`执行和调用时）。
+
+正因为它是如此容易地被搞错，请限制它的使用场景：
+
+* 在构造函数中
+* 在对象的方法中（包括由此创建出的闭包内）
+
+### True和False ：布尔值表达式
+
+以下用作布尔表达式时均为False：
+
+```js
+null
+undefined
+''  // 空字符串
+0   // 数字0
+```
+
+但同时要注意，以下在布尔表达式中始终为True：
+
+```js
+'0' // 字符串'0'
+[]  // 空数组
+{}  // 空对象
+```
+
+基于以上结论，我们可以把下面的代码：
+
+```js
+if(x != null)
+```
+
+精简为：
+
+```js
+if(x)
+```
+
+同样，如果你想判断一个变量既不为null，也不是空字符串的话，不必用：
+
+```js
+if (x != null && x != '')
+```
+
+只需要：
+
+```js
+if(x)
+```
+
+即可。
+
+`注意，有一些很容易搞错的布尔表达式。以下列举出一部分：`
+
+```js
+Boolean('0') == true
+'0' != true
+0 != null
+0 == [] //特别注意，0 == false, [] == true, 但是 0 == []
+0 == false
+Boolean(null) == false // 这个也要特别注意
+null != true
+null != false
+Boolean(undefined) == false
+undefined != true
+undefined != false
+Boolean([]) == true
+[] != true
+[] == false
+Boolean({}) == true
+{} != true
+{} != false
+NaN != true
+NaN != false
+Boolean(NaN) == false
+```
+
+这里很容易混淆，最好自己多实践一下。能用if\(x\)来判断的，不一定能用if\(x == true\)来判断。 \#\#\#三目运算符 对于下面这种简单的true返回a,false返回b的判断：
+
+```js
+ifreturn (condition) ? a : b;(condition) {
+    return a;
+} else {
+    return b;
+}
+```
+
+可以采用三目运算符简写为：
+
+```js
+return (condition) ? a : b;
+```
+
+在生成HTML时，这种表达方式尤其有用：
+
+```js
+var cls = isFocused ? 'class="chk-focus"' : '';
+var checkbox = '<input type="checkbox" />'
+```
+
+### 逻辑运算符
+
+由逻辑与\(&&\)和逻辑或\(\|\|\)运算符连接的表达式会从左到右依次执行，直到遇到满足条件为止，因此逻辑或\(\|\|\)运算符也可以当作默认值运算符来用。比如：
+
+```js
+function doSomething(jQuery) {
+    var $;
+    if (jQuery) {
+        $ = jQuery;
+    } else {
+        $ = window.jQuery;
+    }
+    // other code
+}
+```
+
+可以简写为：
+
+```js
+function doSomething(jQuery) {
+    var $ = jQuery || window.jQuery;
+}
+```
+
+逻辑与\(&&\)也可以做类似的使用（当满足左边条件时执行右边的语句）。比如
+
+```js
+if('function' == typeof pgvMain) {
+    pgvMain();
+}
+```
+
+可以简写为：
+
+```js
+'function' == typeof pgvMain && pgvMain();
+```
+
+### 节点遍历操作
+
+我们经常有类似这样的操作：获取一组节点，然后对这个节点数组（节点列表）进行遍历。通常代码是这样的：
+
+```js
+var divs = document.getElementsByTagName('div');
+for (var i = 0; i < divs.length; i++) {
+  doSomething(divs[i]);
+}
+```
+
+这样的操作，假如获取节点长度\(divs.length\)的复杂度是O\(n\)，获取某个子节点的复杂度也是O\(n\)，则由于每次要计算节点长度，因而遍历一遍所有节点，这个算法的时间复杂度就为O\(n^2\)。用以下方法可降低时间复杂度：
+
+```js
+var divs = document.getElementsByTagName('div');
+var size = divs.length;
+for (var i = 0; i < size; i++) {
+    doSomething(divs[i]);
+}
+```
+
+这里先把节点长度存到一个局部变量中，以后每次循环不再计算节点长度，因此总的时间复杂度变为了O\(n\) + 1; 还可以用另一种方法
+
+```js
+var divs = document.getElementsByTagName('div');
+for (var i = 0, div; div = divs[i]; i++) {
+    doSomething(div);
+}
+```
+
+这种算法由于完全不检查节点长度，只是每次循环的时候取出一个子节点，因此时间复杂度降低到了O\(n\)。
 
