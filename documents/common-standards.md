@@ -52,5 +52,23 @@
 
 * print.css 打印样式
 
+## 项目文件规范
 
+文件均归档至约定的目录中，建包格式如下：
+
+![](/assets/import.png)
+
+注意：
+
+css文件放在css文件夹中
+
+![](/assets/import3.png)
+
+image放在images文件夹中，为了能便捷快速的找到相应的图片资源，images文件下又氛围img和icon两个文件夹。所有图片img-，banner，背景图bg-等都放在img文件夹中。图标icon-，聚合图spr-，放在icon文件夹中。
+
+![](/assets/import4.png)
+
+js放在js文件夹中。
+
+![](/assets/import5.png)
 
