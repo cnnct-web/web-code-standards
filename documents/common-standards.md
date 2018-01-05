@@ -4,19 +4,17 @@
 
 不管有多少人共同参与同一项目，一定要确保每一行代码都像是同一个人编写的。
 
-永远遵循同一套编码规范，可以是这里列出的，也可以是你自己总结的。如果你发现本规范中有任何错误，敬请在 Issues 中指正。
-
 ## 项目命名
 
-项目名全部采用小写方式，以中划线分隔，禁止驼峰式命名。比如：my-project-name
+项目名全部采用小写方式，以下划线分隔，禁止驼峰式命名。比如：my\_project\_name
 
 ## 文件命名
 
-文件命名参照项目命名规则。比如: error-report.html
+文件命名参照项目命名规则。比如: error\_report.html
 
-有复数结构时，要采用复数命名法，比如： scripts, styles, images, data-models
+有复数结构时，要采用复数命名法，比如： scripts, styles, images, data\_models
 
-文件名中只可由小写英文字母 a~~z 、排序数字 0~~9 或间隔符 - 组成，禁止包含特殊符号，比如空格、$ 等
+文件名中只可由小写英文字母 az 、排序数字 09 或间隔符 \_ 组成，禁止包含特殊符号，比如空格、$ 等
 
 为了醒目，某些说明文件的文件名，可以使用大写字母，比如: README, LICENSE
 
@@ -26,11 +24,11 @@
 
 文件常用命名:
 
-* index.shtml 引导页&首页
+* index.html 引导页&首页
 
-* main.shtml 首页
+* main.html 首页
 
-* download.shtml 下载页面
+* download.html 下载页面
 
 * act.html 活动列表页面
 
