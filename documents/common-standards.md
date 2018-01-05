@@ -72,3 +72,7 @@ js放在js文件夹中。
 
 ![](/assets/import5.png)
 
+页面放在一个名为module的文件夹中。根据功能点分类存放不同的页面，如下所示，app/h5（h5支持app），businesses（商户类），card（市民卡类），common（公共页面部分），generic（通用类），management（运维管理类），order（订单类），payment（支付类），static（静态展示页面），user（用户类）等。
+
+![](/assets/import6.png)
+
