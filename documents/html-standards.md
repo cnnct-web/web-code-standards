@@ -6,19 +6,19 @@
 
 所有代码只使用小写：适用于标签名，类名，标签的属性及属性值（text/CDATA例外，作为内容时例外）
 
-```
+```html
 <ul class="news-list"><li></li><li></li></ul>
 ```
 
 ### 使用html5的doctype
 
-```
+```html
 <!doctype html>
 ```
 
 ### 页面编码使用gbk
 
-```
+```html
 <meta charset="gbk">
 ```
 
@@ -28,7 +28,7 @@
 
 ### 页面内容lang为zh-Hans-CN
 
-```
+```html
 <html lang="zh-Hans-CN">
 ```
 
@@ -51,7 +51,7 @@
 
 必须在`head`区域中加上对页面相关人员注释，方便在产品环境中的查看
 
-```
+```html
 <!-- 页面设计：xxx | 页面制作：xxx | 制作时间：xxxx-xx-xx -->
 ```
 
@@ -59,7 +59,7 @@
 
 include中的地址为相对地址，不能使用绝对地址。被include的文件后缀可以是:`.html`或者`.inc`。
 
-```
+```html
 <!--#include virtual="/xxxx.html" -->
 ```
 
@@ -95,7 +95,7 @@ include中的地址为相对地址，不能使用绝对地址。被include的文
 
 必须加上width和height属性，值为它的原大小，但不要用来对它进行缩放。
 
-```
+```html
 <img src="http://ossweb-img.qq.com/images/helper/v2/logo.png" width="172" height="72" alt="Q游助手">
 ```
 
@@ -118,7 +118,7 @@ bg-body.jpg / spr-home.png / img-promo.jpg / btn-submit.png / icon-game.png
 
 图片服务器域名为[`http://ossweb-img.qq.com/`](http://ossweb-img.qq.com/)和[`http://game.gtimg.cn/`](http://game.gtimg.cn/)，推荐使用后者。
 
-```
+```html
 <!--不推荐-->
 http://ossweb-img.qq.com/images/项目名称/xxx
 
@@ -132,20 +132,20 @@ http://game.gtimg.cn/images/项目名称/xxx
 
 感叹号后面2个横线，结束时2个横线； 不要在注释内容中使`--`，`--`只能发生在XHTML注释的开头和结束，也就是说，在内容中它们不再有效。 例如下面的代码是错误的:
 
-```
+```html
 <!--这里是注释     -这里是注释-->
 <!--    -这里是注释     -这里是注释    --->
 ```
 
 用等号或者空格替换内部的虚线,这样是正确的
 
-```
+```html
 <!--这里是注释============这里是注释-->
 ```
 
 IE条件注释（IE10已不支持条件注释）
 
-```
+```html
 <!-- [if IE]>
 这里只有ie浏览器才可以显示
 <![endif]-->
@@ -171,7 +171,7 @@ IE条件注释（IE10已不支持条件注释）
 
 为防止外链脚本未申明正确编码导致乱码的问题，脚本中如用到中文，必须转为[unicode码](http://app.baidu.com/app/enter?appid=409757)
 
-```
+```html
 /* 不推荐 */
 document.write("关于腾讯游戏")
 
@@ -183,7 +183,7 @@ document.write("\u5173\u4e8e\u817e\u8baf\u6e38\u620f")
 
 不要为CSS、JS使用类型属性，特别说明类型（type）属性是多余的，在HTML5中默认已包含
 
-```
+```html
 <!--不推荐-->
 <link href="../css/comm.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"><!--mce:0--></script>
@@ -199,7 +199,7 @@ document.write("\u5173\u4e8e\u817e\u8baf\u6e38\u620f")
 
 为半闭合元素加上'/'闭合符是没必要的，申明为html5的doctype后，所有浏览器都会正确处理，常见的半闭合元素：img input hr br
 
-```
+```html
 <!--不推荐-->
 <br /><hr /><img src="/wiki/" /><input type="text" />
 
@@ -211,7 +211,7 @@ document.write("\u5173\u4e8e\u817e\u8baf\u6e38\u620f")
 
 在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）
 
-```
+```html
 <!--不推荐-->
 <a href="/wiki/">more>></a>
 
@@ -223,7 +223,7 @@ document.write("\u5173\u4e8e\u817e\u8baf\u6e38\u620f")
 
 段落元素与标题元素只能嵌套内联元素
 
-```
+```html
 <!--不推荐-->
 <a><p> </p><div></div><p> </p></a>  <h2><div></div></h2>
 
