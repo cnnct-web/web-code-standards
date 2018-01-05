@@ -2,55 +2,41 @@
 
 ## 黄金定律
 
-不管有多少人共同参与同一项目，一定要确保每一行代码都像是同一个人编写的。
+坚持制定好的代码规范。
 
-## 项目命名
+无论团队人数多少，代码应该同出一门。
 
-项目名全部采用小写方式，以下划线分隔，禁止驼峰式命名。比如：my\_project\_name
+### 项目命名
 
-## 文件命名
+全部采用小写方式， 以下划线分隔，禁止驼峰式命名。
 
-文件命名参照项目命名规则。比如: error\_report.html
+例：my\_project\_name
 
-有复数结构时，要采用复数命名法，比如： scripts, styles, images, data\_models
+### 目录命名
 
-文件名中只可由小写英文字母 az 、排序数字 09 或间隔符 \_ 组成，禁止包含特殊符号，比如空格、$ 等
+参照项目命名规则；
 
-为了醒目，某些说明文件的文件名，可以使用大写字母，比如: README, LICENSE
+有复数结构时，要采用复数命名法。
 
-为更好的表达语义，文件名使用英文名词命名，或英文简写。
+例：scripts/js, styles/css, images, data\_models
 
-不允许命名带有广告等英文的单词，例如ad,adv,adver,advertising，防止该模块被浏览器当成垃圾广告过滤掉。任何文件的命名均如此。
+### JS文件命名
 
-文件常用命名:
+参照项目命名规则。
 
-* index.html 引导页&首页
+例：account\_model.js
 
-* main.html 首页
+### CSS, SCSS文件命名
 
-* download.html 下载页面
+参照项目命名规则。
 
-* act.html 活动列表页面
+例：retina\_sprites.scss
 
-* video.html 视频
+### HTML文件命名
 
-* cdkey.html CDKEY页面
+参照项目命名规则。
 
-* base.css 基本样式
-
-* layout.css 框架布局
-
-* module.css 模块样式
-
-* global.css 全局样式
-
-* font.css 字体样式
-
-* index.css 首页样式
-
-* link.css 链接样式
-
-* print.css 打印样式
+例：error\_report.html
 
 ## 项目文件规范（根据不同情况可做改动）
 
