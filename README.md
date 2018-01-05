@@ -1,4 +1,12 @@
-# web前端开发规范![](/assets/desk.png)
+![](/assets/网新创建logo_new.jpg)
+
+# web前端开发规范
+
+本手册用于公司web前端开发工程师共享资料。
+
+版权所有：浙江创建科技有限公司[http://www.increator.cn/](http://www.increator.cn/)
+
+![](/assets/desk.png)
 
 ## 前言简介
 
