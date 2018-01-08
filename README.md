@@ -1,4 +1,4 @@
-![](/assets/网新创建logo_new.jpg)
+![](http://i2.bvimg.com/627112/35e4207942aeee9a.jpg)
 
 # web前端开发规范
 
