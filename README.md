@@ -6,7 +6,7 @@
 
 版权所有：浙江创建科技有限公司[http://www.increator.cn/](http://www.increator.cn/)
 
-![](/assets/desk.png)
+![](http://i2.bvimg.com/627112/c45a3d2ea40c633f.png)
 
 ## 前言简介
 
