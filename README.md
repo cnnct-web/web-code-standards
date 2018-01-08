@@ -1,4 +1,6 @@
-![](http://i1.bvimg.com/627112/8ed80b761e8f93e4.png)
+![](http://i1.bvimg.com/627112/8c571015a449ec00.png)
+
+
 
 # web前端开发规范
 
