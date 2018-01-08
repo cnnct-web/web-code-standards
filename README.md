@@ -1,4 +1,4 @@
-![](web-code-standards/assets/网新创建logo_new.jpg)
+![](/assets/网新创建logo_new.jpg)
 
 # web前端开发规范
 
