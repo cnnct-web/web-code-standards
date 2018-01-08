@@ -50,7 +50,7 @@
 
 * css文件放在css文件夹中，如下图。
 
-![](/assets/http://i2.bvimg.com/627112/0fa3989cf11a1c2b.png)
+![](http://i2.bvimg.com/627112/0fa3989cf11a1c2b.png)
 
 * image放在images文件夹中，为了能便捷快速的找到相应的图片资源，images文件下又氛围img和icon两个文件夹。所有图片img-，banner，背景图bg-等都放在img文件夹中。图标icon-，聚合图spr-，放在icon文件夹中，如下图。
 
