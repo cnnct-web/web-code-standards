@@ -1,12 +1,10 @@
-![](http://i2.bvimg.com/627112/35e4207942aeee9a.jpg)
+![](http://i1.bvimg.com/627112/8ed80b761e8f93e4.png)
 
 # web前端开发规范
 
 本手册用于公司web前端开发工程师共享资料。
 
 版权所有：浙江创建科技有限公司[http://www.increator.cn/](http://www.increator.cn/)
-
-![](http://i2.bvimg.com/627112/c45a3d2ea40c633f.png)
 
 ## 前言简介
 
