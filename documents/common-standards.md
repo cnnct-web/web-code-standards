@@ -44,25 +44,25 @@
 
 文件均归档至约定的目录中，建包格式如下：
 
-![](/assets/import.png)
+![](http://i2.bvimg.com/627112/a32f07a2bad77791.png)
 
 注意：
 
 * css文件放在css文件夹中，如下图。
 
-![](/assets/import3.png)
+![](/assets/http://i2.bvimg.com/627112/0fa3989cf11a1c2b.png)
 
 * image放在images文件夹中，为了能便捷快速的找到相应的图片资源，images文件下又氛围img和icon两个文件夹。所有图片img-，banner，背景图bg-等都放在img文件夹中。图标icon-，聚合图spr-，放在icon文件夹中，如下图。
 
-![](/assets/import4.png)
+![](http://i2.bvimg.com/627112/96e1182e484b534f.png)
 
 * js放在js文件夹中，如下图。
 
-![](/assets/import5.png)
+![](http://i2.bvimg.com/627112/5607edb94516cd4c.png)
 
 * 页面放在一个名为module的文件夹中。根据功能点分类建文件夹存放相应功能的页面，可参考接口文档接口的分类来建文件夹，如下图所示，app/h5（h5支持app），businesses（商户类），card（市民卡类），common（公共页面部分），generic（通用类），management（运维管理类），order（订单类），payment（支付类），static（静态展示页面），user（用户类）等，如下图。
 
-![](/assets/import6.png)
+![](http://i2.bvimg.com/627112/895b375bbcbb6688.png)
 
-![](/assets/import7.png)
+![](http://i2.bvimg.com/627112/1362866cd9fbd567.png)
 
